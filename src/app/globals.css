@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
+/* ROOT COLORS */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff7ed;
+  --foreground: #111827;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* BODY */
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  width: 100%;
+  background: white;
+  color: black;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 14px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+/* INPUT FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+
+/* NAV BUTTON */
+.nav-btn {
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #fed7aa;
+}
+
+/* ACTIVE NAV */
+.nav-btn-active {
+  background: #ea580c;
+  color: white;
+}
+
+/* PRIMARY BUTTON */
+.primary-btn {
+  background: #ea580c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #c2410c;
+}
+
+/* SECONDARY BUTTON */
+.secondary-btn {
+  background: white;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: 1px solid black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #f3f4f6;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE STYLE */
+.image-style {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #c2410c;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .nav-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
 }

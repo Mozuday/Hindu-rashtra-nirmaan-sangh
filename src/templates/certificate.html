@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: #f4efe6;
+}
+
+/* SINGLE PAGE */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+.certificate {
+  width: 1123px;
+  height: 794px;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,248,235,0.95)),
+    url("http://localhost:3000/bg-pattern.png");
+
+  border: 18px solid #d97706;
+  padding: 45px 55px;
+}
+
+/* INNER BORDER */
+.inner-border {
+  position: absolute;
+  inset: 12px;
+  border: 2px solid #f59e0b;
+  pointer-events: none;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* CENTER LOGO */
+.logo {
+  width: 95px;
+  margin-bottom: 8px;
+}
+
+/* TITLE ROW */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* FLAGS */
+.flag {
+  width: 90px;
+  height: auto;
+}
+
+/* HINDI TITLE */
+.hindi-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #c2410c;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* ENGLISH TITLE */
+.eng-title {
+  font-size: 22px;
+  color: #3b2f2f;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* CERTIFICATE TITLE */
+.cert-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cert-title h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #d97706;
+}
+
+.line {
+  width: 220px;
+  height: 2px;
+  background: #d97706;
+  margin: 12px auto 0;
+}
+
+/* MAIN CONTENT */
+.content {
+  text-align: center;
+  margin-top: 35px;
+  color: #333;
+}
+
+.content-text {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* NAME */
+.name {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #b45309;
+  border-bottom: 3px dashed #d97706;
+  padding: 0 25px 10px;
+  margin-bottom: 30px;
+}
+
+/* DETAILS */
+.details {
+  font-size: 22px;
+  line-height: 2;
+}
+
+.highlight {
+  color: #c2410c;
+  font-weight: bold;
+}
+
+/* STAMP */
+.stamp {
+  position: absolute;
+  right: 70px;
+  bottom: 145px;
+  width: 140px;
+  opacity: 0.8;
+  transform: rotate(-12deg);
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  font-size: 14px;
+  color: #444;
+}
+
+/* SIGN */
+.sign {
+  text-align: center;
+}
+
+.sign-line {
+  width: 170px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 6px;
+}
+
+/* WATERMARK */
+.watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.07;
+  z-index: 0;
+}
+
+.watermark img {
+  width: 800px;
+}
+
+/* FIX OVERFLOW */
+* {
+  box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+
+<div class="certificate">
+
+  <div class="inner-border"></div>
+
+  <!-- WATERMARK -->
+  <div class="watermark">
+    <img src="http://localhost:3000/logo.png" />
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <img src="http://localhost:3000/logo.png" class="logo" />
+
+    <!-- FLAGS + TITLE -->
+    <div class="title-row">
+
+      <img src="http://localhost:3000/flag.png" class="flag" />
+
+      <div>
+        <div class="hindi-title">
+          हिन्दू राष्ट्र निर्माण संघ
+        </div>
+
+        <div class="eng-title">
+          Hindu Raashtra Nirmaan Sangh
+        </div>
+
+        <div class="subtitle">
+          OFFICIAL MEMBERSHIP CERTIFICATE
+        </div>
+      </div>
+
+      <img src="http://localhost:3000/flag.png" class="flag" />
+
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATE TITLE -->
+  <div class="cert-title">
+    <h2>प्रमाण पत्र | CERTIFICATE</h2>
+    <div class="line"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div class="content-text">
+      यह प्रमाणित किया जाता है कि
+    </div>
+
+    <div class="name">
+      {{name}}
+    </div>
+
+    <div class="details">
+
+      पिता का नाम:
+      <span class="highlight">{{father}}</span>
+
+      <br/>
+
+      राज्य:
+      <span class="highlight">{{state}}</span>
+
+      <br/><br/>
+
+      को हिन्दू राष्ट्र निर्माण संघ का
+      <br/>
+      आधिकारिक सदस्य घोषित किया जाता है।
+
+      <br/><br/>
+
+      सदस्य आईडी:
+      <span class="highlight">{{id}}</span>
+
+    </div>
+
+  </div>
+
+  <!-- STAMP -->
+  <img src="http://localhost:3000/seal.png" class="stamp" />
+
+  <!-- FOOTER -->
+  <div class="footer">
+
+    <div>
+      दिनांक / Date: {{date}}
+    </div>
+
+    <div class="sign">
+      <div class="sign-line"></div>
+      अधिकृत हस्ताक्षर<br/>
+      Authorized Signatory
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
