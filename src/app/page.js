@@ -84,7 +84,7 @@ export default function Home() {
           <div>
 
             <img
-              src="/founder.WEBP"
+              src="/founder.webp"
               className="w-full h-auto rounded-3xl object-cover"
             />
 
@@ -146,10 +146,10 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {[
-              "/img1.WEBP",
-              "/img2.WEBP",
-              "/img3.WEBP",
-              "/img4.WEBP",
+              "/img1.webp",
+              "/img2.webp",
+              "/img3.webp",
+              "/img4.webp",
             ].map((img, index) => (
 
               <div

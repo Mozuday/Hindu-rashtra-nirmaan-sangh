@@ -76,7 +76,7 @@ export default function About() {
             <div>
 
               <img
-                src="/founder.WEBP"
+                src="/founder.webp"
                 className="w-full rounded-3xl object-cover"
               />
 
@@ -123,21 +123,21 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {[
-                "/img1.WEBP",
-                "/img2.WEBP",
-                "/img3.WEBP",
-                "/img4.WEBP",
-                "/img5.WEBP",
-                "/img6.WEBP",
-                "/img7.WEBP",
-                "/img8.WEBP",
-                "/img9.WEBP",
-                "/img10.WEBP",
-                "/img11.WEBP",
-                "/img12.WEBP",
-                "/img13.WEBP",
-                "/img14.WEBP",
-                "/img15.WEBP",
+                "/img1.webp",
+                "/img2.webp",
+                "/img3.webp",
+                "/img4.webp",
+                "/img5.webp",
+                "/img6.webp",
+                "/img7.webp",
+                "/img8.webp",
+                "/img9.webp",
+                "/img10.webp",
+                "/img11.webp",
+                "/img12.webp",
+                "/img13.webp",
+                "/img14.webp",
+                "/img15.webp",
               ].map((img, index) => (
 
                 <div
