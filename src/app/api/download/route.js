@@ -1,48 +1,74 @@
-import puppeteer from "puppeteer";
+import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer-core";
 import fs from "fs";
 import path from "path";
 
 export const runtime = "nodejs";
 
 export async function GET(req) {
-  const { searchParams } = new URL(req.url);
+  try {
+    const { searchParams } = new URL(req.url);
 
-  const name = searchParams.get("name");
-  const father = searchParams.get("father");
-  const state = searchParams.get("state");
-  const id = searchParams.get("id");
+    const name = searchParams.get("name") || "";
+    const father = searchParams.get("father") || "";
+    const state = searchParams.get("state") || "";
+    const id = searchParams.get("id") || "";
 
-  // 🔥 Load HTML file
-  const filePath = path.join(process.cwd(), "src/templates/certificate.html");
-  let html = fs.readFileSync(filePath, "utf-8");
+    const filePath = path.join(
+      process.cwd(),
+      "src",
+      "templates",
+      "certificate.html"
+    );
 
-  // 🔥 Replace placeholders
-  html = html
-    .replace("{{name}}", name)
-    .replace("{{father}}", father)
-    .replace("{{state}}", state)
-    .replace("{{id}}", id)
-    .replace("{{date}}", new Date().toLocaleDateString());
+    let html = fs.readFileSync(filePath, "utf8");
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+    html = html
+      .replace("{{name}}", name)
+      .replace("{{father}}", father)
+      .replace("{{state}}", state)
+      .replace("{{id}}", id)
+      .replace("{{date}}", new Date().toLocaleDateString("en-IN"));
 
-  const page = await browser.newPage();
-  await page.setContent(html, { waitUntil: "networkidle0" });
+    const browser = await puppeteer.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
 
-  const pdfBuffer = await page.pdf({
-    format: "A4",
-    printBackground: true,
-  });
+    const page = await browser.newPage();
 
-  await browser.close();
+    await page.setContent(html, {
+      waitUntil: "networkidle0",
+    });
 
-  return new Response(pdfBuffer, {
-    headers: {
-      "Content-Type": "application/pdf",
-      "Content-Disposition": "attachment; filename=certificate.pdf",
-    },
-  });
+    const pdf = await page.pdf({
+      format: "A4",
+      printBackground: true,
+    });
+
+    await browser.close();
+
+    return new Response(pdf, {
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Disposition": 'attachment; filename="certificate.pdf"',
+      },
+    });
+  } catch (err) {
+    console.error(err);
+
+    return new Response(
+      JSON.stringify({
+        error: err.message,
+      }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  }
 }
