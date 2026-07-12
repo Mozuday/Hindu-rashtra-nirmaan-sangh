@@ -128,13 +128,7 @@ function SuccessContent() {
             {/* Buttons */}
             <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
               <a
-                href={`/api/download?name=${encodeURIComponent(
-                  name
-                )}&father=${encodeURIComponent(
-                  father || ""
-                )}&state=${encodeURIComponent(
-                  state || ""
-                )}&id=${encodeURIComponent(id)}`}
+                href={`/certificate?name=${encodeURIComponent(name)}&father=${encodeURIComponent(father)}&state=${encodeURIComponent(state)}&id=${encodeURIComponent(id)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-center transition shadow-lg"
