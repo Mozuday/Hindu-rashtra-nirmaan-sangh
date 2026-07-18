@@ -64,7 +64,7 @@ export default function Home() {
 
             <img
               src="/hero.png"
-              className="w-full max-w-2xl object-contain"
+              className="w-full max-w-2xl object-contain rounded-4xl border-4 border-orange-400"
             />
 
           </div>
