@@ -39,7 +39,19 @@ export default function Home() {
               हिंदू राष्ट्र निर्माण संघ एक सांस्कृतिक और सामाजिक संगठन है. इसका उद्देश्य समाज में एकता, अनुशासन, सनातन संस्कृति और राष्ट्र सेवा की भावना को मजबूत बनाना व भारत को संवैधानिक रूप से हिंदू राष्ट्र घोषित करना है.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
+          </div>
+
+          {/* RIGHT */}
+          <div className="flex justify-center">
+
+            <img
+              src="/hero.png"
+              className="w-full max-w-2xl object-contain rounded-4xl border-4 border-orange-400"
+            />
+
+          </div>
+
+          <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
 
               <a
                 href="#register"
@@ -56,18 +68,6 @@ export default function Home() {
               </a>
 
             </div>
-
-          </div>
-
-          {/* RIGHT */}
-          <div className="flex justify-center">
-
-            <img
-              src="/hero.png"
-              className="w-full max-w-2xl object-contain rounded-4xl border-4 border-orange-400"
-            />
-
-          </div>
 
         </div>
 
