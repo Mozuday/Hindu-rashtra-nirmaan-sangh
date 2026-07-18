@@ -10,44 +10,48 @@ export default function States() {
 
   const states = [
     {
-      name: "उत्तर प्रदेश",
+      state: "उत्तर प्रदेश",
+      name: "दुष्यंत राणा",
       leader: "प्रदेश अध्यक्ष",
-      phone: "+91 9000000000",
-      email: "up@hrns.org",
+      phone: "+91 9456963680",
       highlight: true,
     },
     {
-      name: "दिल्ली ",
-      leader: "प्रदेश अध्यक्ष",
-      phone: "+91 9000000000",
-      email: "up@hrns.org",
+      state: "दिल्ली ",
+      name: "रवि कुमार जी",
+      leader: "प्रदेश सह-प्रभारी",
+      phone: "+91 9266214168"
     },
     {
-      name: "हरियाणा",
+      state: "उत्तराखंड",
+      name: "ऋषिवेंद्र प्रताप सिंह",
+      leader: "प्रदेश प्रभारी",
+      phone: "+91 9410102712",
+    },
+    {
+      state: "हरियाणा",
+      name: "",
       leader: "प्रदेश अध्यक्ष",
       phone: "+91 9444444444",
       email: "hr@hrns.org",
     },
     {
-      name: "उत्तराखंड",
-      leader: "प्रदेश अध्यक्ष",
-      phone: "+91 9555555555",
-      email: "uk@hrns.org",
-    },
-    {
-      name: "हिमाचल प्रदेश",
+      state: "हिमाचल प्रदेश",
+      name: "",
       leader: "प्रदेश अध्यक्ष",
       phone: "+91 9666666666",
       email: "hp@hrns.org",
     },
     {
-      name: "राजस्थान",
+      state: "राजस्थान",
+      name: "",
       leader: "प्रदेश अध्यक्ष",
       phone: "+91 9333333333",
       email: "rj@hrns.org",
     },
     {
-      name: "मध्य प्रदेश",
+      state: "मध्य प्रदेश",
+      name: "",
       leader: "प्रदेश अध्यक्ष",
       phone: "+91 9777777777",
       email: "mp@hrns.org",
@@ -109,7 +113,7 @@ export default function States() {
                     <div>
 
                       <h3 className="text-2xl font-bold text-orange-700">
-                        {state.name}
+                        {state.state}
                       </h3>
 
                     </div>
@@ -143,16 +147,16 @@ export default function States() {
 
                           <p>
                             <span className="font-bold">
-                              फोन:
+                              नाम:
                             </span>{" "}
-                            {state.phone}
+                            {state.name}
                           </p>
 
                           <p>
                             <span className="font-bold">
-                              ईमेल:
+                              फोन:
                             </span>{" "}
-                            {state.email}
+                            {state.phone}
                           </p>
 
                         </div>
