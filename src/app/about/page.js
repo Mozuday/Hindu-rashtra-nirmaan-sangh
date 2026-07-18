@@ -110,16 +110,16 @@ Our aim is to foster unity, cooperation, social harmony, and religious and cultu
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {[
-                "/img1.webp",
-                "/img2.webp",
-                "/img3.webp",
-                "/img4.webp",
-                "/img5.webp",
-                "/img6.webp",
-                "/img7.webp",
-                "/img8.webp",
-                "/img9.webp",
-                "/img10.webp",
+                "/web (1).webp",
+                "/web (2).webp",
+                "/web (3).webp",
+                "/web (4).webp",
+                "/web (5).webp",
+                "/web (6).webp",
+                "/web (7).webp",
+                "/web (8).webp",
+                "/web (9).webp",
+                "/web (10).webp",
               ].map((img, index) => (
 
                 <div

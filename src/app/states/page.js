@@ -247,16 +247,16 @@ export default function States() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
         {[
-          "/up1.jpg",
-          "/up2.jpg",
-          "/up3.jpg",
-          "/up4.jpg",
-          "/up5.jpg",
-          "/up6.jpg",
-          "/up7.jpg",
-          "/up8.jpg",
-          "/up9.jpg",
-          "/up10.jpg",
+          "/up (1).webp",
+          "/up (2).webp",
+          "/up (3).webp",
+          "/up (4).webp",
+          "/up (5).webp",
+          "/up (6).webp",
+          "/up (7).webp",
+          "/up (8).webp",
+          "/up (9).webp",
+          "/up (10).webp",
         ].map((img, index) => (
 
           <div
