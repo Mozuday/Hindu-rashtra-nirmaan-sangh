@@ -22,9 +22,7 @@ export default function About() {
             </h1>
 
             <p className="text-gray-700 text-lg mt-5 max-w-3xl mx-auto leading-8">
-              हिन्दू राष्ट्र निर्माण संघ एक सांस्कृतिक एवं सामाजिक संगठन है
-              जिसका उद्देश्य समाज में एकता, अनुशासन, संस्कार और राष्ट्रभक्ति
-              की भावना को मजबूत करना है।
+              हिंदू राष्ट्र निर्माण संघ एक सांस्कृतिक और सामाजिक संगठन है. इसका उद्देश्य समाज में एकता, अनुशासन, सनातन संस्कृति और राष्ट्र सेवा की भावना को मजबूत बनाना व भारत को संवैधानिक रूप से हिंदू राष्ट्र घोषित करना है.
             </p>
 
           </div>
@@ -39,30 +37,26 @@ export default function About() {
             <div className="space-y-6 text-gray-700 leading-8 text-lg">
 
               <p>
-                हिन्दू राष्ट्र निर्माण संघ समाज को संगठित, जागरूक और सशक्त
-                बनाने की दिशा में निरंतर कार्य कर रहा है। हमारा उद्देश्य
-                भारतीय संस्कृति, परंपरा और राष्ट्रभक्ति के मूल्यों को नई पीढ़ी
-                तक पहुँचाना है।
+                संगठन का उद्देश्य राष्ट्रभक्ति की भावना को सुदृढ़ करते हुए भारत को संवैधानिक एवं लोकतांत्रिक प्रक्रिया के माध्यम से हिंदू राष्ट्र बनाए जाने के विचार का समर्थन करने वाले लोगों को एकजुट करना है।
               </p>
 
               <p>
-                संगठन युवाओं को समाज सेवा, अनुशासन और राष्ट्र निर्माण के
-                कार्यों में सक्रिय भागीदारी के लिए प्रेरित करता है। हम मानते
-                हैं कि एक मजबूत समाज ही एक सशक्त राष्ट्र का निर्माण करता है।
+                हमारा विश्वास है कि एक विकसित, सशक्त, संगठित, आत्मनिर्भर और सांस्कृतिक रूप से जागरूक राष्ट्र ही राष्ट्र निर्माण की मजबूत आधारशिला होता है।
               </p>
 
               <p>
-                हमारा प्रयास समाज के हर वर्ग तक पहुँचकर उन्हें एकता, सहयोग और
-                सांस्कृतिक चेतना के माध्यम से जोड़ना है। संगठन विभिन्न सामाजिक
-                एवं सांस्कृतिक कार्यक्रमों के माध्यम से लोगों को जागरूक करने का
-                कार्य करता है।
+                हम समाज में एकता, सहयोग, सामाजिक समरसता, धार्मिक एवं सांस्कृतिक चेतना का प्रसार करना चाहते हैं, ताकि सभी लोग अपनी सांस्कृतिक विरासत, नैतिक मूल्यों और राष्ट्रीय दायित्वों के प्रति जागरूक होकर राष्ट्र के विकास में सक्रिय योगदान दे सकें।
               </p>
 
               <p>
-                Hindu Rashtra Nirman Sangh works towards creating a disciplined,
-                united, and culturally aware society. We aim to inspire youth
-                and individuals to actively contribute towards nation building,
-                social responsibility, and cultural awareness.
+                "एकता हमारी शक्ति है, संगठन हमारी पहचान है और राष्ट्रीय हित हमारी सर्वोच्च प्रतिबद्धता है।"
+              </p>
+
+              <p>
+                The objective of the organization is to strengthen the spirit of patriotism and unite people who support the idea of India becoming a Hindu Rashtra through constitutional and democratic means.
+We believe that a developed, strong, organized, self-reliant, and culturally conscious nation forms the foundation of lasting national development.
+Our aim is to foster unity, cooperation, social harmony, and religious and cultural awareness so that people remain connected to their heritage, uphold moral values, and actively contribute to the nation's progress.
+"Unity is our strength, organization is our identity, and national interest is our highest commitment."
               </p>
 
             </div>
@@ -92,19 +86,12 @@ export default function About() {
               <div className="space-y-5 text-gray-700 leading-8 text-lg">
 
                 <p>
-                  हमारे संस्थापक का उद्देश्य समाज को संगठित और जागरूक बनाना है।
-                  उनके नेतृत्व में संगठन निरंतर राष्ट्र सेवा एवं सामाजिक
-                  कार्यों में आगे बढ़ रहा है।
+                  हमारे संस्थापक माननीय राष्ट्रीय अध्यक्ष परम पूज्य महंत रसिक पीठाधीश्वर श्री श्री 1008 श्री जन्मेजयशरण जी महाराज जानकी घाट बड़ा स्थान अयोध्या जी के नेतृत्व में संगठन युवाओं को अनुशासन राष्ट्र सेवा गौ सेवा सांस्कृतिक और धार्मिक कार्यों के प्रति जागरूक करते हैं भगवान श्री राम की कृपा और परम पूज्य महाराज जी के आशीर्वाद और मार्गदर्शन में संगठन अपने संकल्प भारत को संवैधानिक रूप से हिंदू राष्ट्र घोषित करवाने के लिए निरंतर प्रयास और मेहनत कर रहा है
                 </p>
 
                 <p>
                   उनका दृष्टिकोण युवाओं को अनुशासन, संस्कार और राष्ट्रभक्ति की
                   भावना से जोड़कर समाज में सकारात्मक बदलाव लाना है।
-                </p>
-
-                <p>
-                  संगठन आज विभिन्न क्षेत्रों में समाज सेवा, सांस्कृतिक जागरूकता
-                  और युवाओं के मार्गदर्शन का कार्य कर रहा है।
                 </p>
 
               </div>
@@ -133,11 +120,6 @@ export default function About() {
                 "/img8.webp",
                 "/img9.webp",
                 "/img10.webp",
-                "/img11.webp",
-                "/img12.webp",
-                "/img13.webp",
-                "/img14.webp",
-                "/img15.webp",
               ].map((img, index) => (
 
                 <div
