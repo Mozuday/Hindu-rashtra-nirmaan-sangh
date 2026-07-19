@@ -58,7 +58,7 @@ export default function Certificate({
           src="/Logo.png"
           alt=""
           style={{
-            width: "195px",
+            width: "120px",
           }}
         />
 
