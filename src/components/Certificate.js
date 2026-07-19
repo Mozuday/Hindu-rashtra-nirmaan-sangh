@@ -51,13 +51,14 @@ export default function Certificate({
           position: "relative",
           textAlign: "center",
           paddingTop: "32px",
+          paddingLeft: "20px",
         }}
       >
         <img
           src="/Logo.png"
           alt=""
           style={{
-            width: "95px",
+            width: "195px",
           }}
         />
 
