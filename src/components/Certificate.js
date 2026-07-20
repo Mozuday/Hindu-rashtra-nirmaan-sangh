@@ -178,37 +178,53 @@ export default function Certificate({
       </div>
 
 {/* ================= Date (Bottom Left) ================= */}
-<div className="absolute left-12 bottom-10 text-left text-[15px] text-gray-800 z-20">
-  <div className="font-semibold">
+<div className="absolute left-12 bottom-10 z-20 text-gray-800">
+  <div
+    className="font-semibold text-[16px]"
+    style={{
+      fontFamily: '"Times New Roman", Georgia, serif',
+      letterSpacing: "0.4px",
+    }}
+  >
     दिनांक / Date : {date}
   </div>
 </div>
 
 {/* ================= Bottom Right (Seal + Signature) ================= */}
-<div className="absolute right-12 bottom-8 w-44 z-20">
+<div className="absolute right-12 bottom-8 w-48 z-20">
 
-  <div className="relative flex justify-center">
+  {/* Seal & Signature */}
+  <div className="relative flex justify-center items-center h-36">
+
     {/* Seal */}
     <img
       src="/seal.png"
       alt="Seal"
-      className="w-36"
+      className="w-40"
     />
 
     {/* Signature */}
     <img
       src="/sign.png"
       alt="Signature"
-      className="absolute top-8 w-28"
+      className="absolute top-5 w-28"
     />
+
   </div>
 
+  {/* Line */}
+  <div className="mx-auto mt-1 mb-2 w-32 border-t border-gray-700"></div>
+
   {/* Text */}
-  <div className="mt-2 text-center leading-tight">
+  <div
+    className="text-center leading-tight"
+    style={{ fontFamily: '"Times New Roman", Georgia, serif' }}
+  >
     <div className="font-semibold text-[15px]">
       अधिकृत हस्ताक्षर
     </div>
-    <div className="text-xs">
+
+    <div className="text-xs tracking-wide">
       Authorized Signatory
     </div>
   </div>
