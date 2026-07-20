@@ -177,26 +177,35 @@ export default function Certificate({
 
       </div>
 
-{/* ================= Bottom Left (Seal + Sign) ================= */}
-<div className="absolute left-12 bottom-8 z-20">
+{/* ================= Date (Bottom Left) ================= */}
+<div className="absolute left-12 bottom-10 text-left text-[15px] text-gray-800 z-20">
+  <div className="font-semibold">
+    दिनांक / Date : {date}
+  </div>
+</div>
 
-  {/* Seal */}
-  <img
-    src="/seal.png"
-    alt="Seal"
-    className="w-40"
-  />
+{/* ================= Bottom Right (Seal + Signature) ================= */}
+<div className="absolute right-12 bottom-8 w-44 z-20">
 
-  {/* Signature */}
-  <img
-    src="/sign.png"
-    alt="Signature"
-    className="w-28 -mt-20 ml-6"
-  />
+  <div className="relative flex justify-center">
+    {/* Seal */}
+    <img
+      src="/seal.png"
+      alt="Seal"
+      className="w-36"
+    />
+
+    {/* Signature */}
+    <img
+      src="/sign.png"
+      alt="Signature"
+      className="absolute top-8 w-28"
+    />
+  </div>
 
   {/* Text */}
-  <div className="-mt-2 text-center">
-    <div className="font-semibold text-base">
+  <div className="mt-2 text-center leading-tight">
+    <div className="font-semibold text-[15px]">
       अधिकृत हस्ताक्षर
     </div>
     <div className="text-xs">
@@ -204,13 +213,6 @@ export default function Certificate({
     </div>
   </div>
 
-</div>
-
-{/* ================= Date ================= */}
-<div className="absolute right-16 bottom-12 text-right text-[15px] text-gray-800 z-20">
-  <div className="font-semibold">
-    दिनांक / Date : {date}
-  </div>
 </div>
 
       {/* ================= Decorative Bottom Line ================= */}
