@@ -17,7 +17,7 @@ export default function Certificate({
       <img
         src="/bg-pattern.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-10 scale-80"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 scale-60"
       />
 
       {/* Inner Border */}
@@ -177,42 +177,41 @@ export default function Certificate({
 
       </div>
 
-            {/* ================= Bottom Left (Seal + Sign) ================= */}
-
+{/* ================= Bottom Left (Seal + Sign) ================= */}
 <div className="absolute left-12 bottom-8 z-20">
 
   {/* Seal */}
-
   <img
     src="/seal.png"
     alt="Seal"
     className="w-40"
   />
+
+  {/* Signature */}
+  <img
+    src="/sign.png"
+    alt="Signature"
+    className="w-28 -mt-20 ml-6"
+  />
+
   {/* Text */}
-
-  <div className="mt-0 text-center">
-
+  <div className="-mt-2 text-center">
     <div className="font-semibold text-base">
       अधिकृत हस्ताक्षर
     </div>
-
     <div className="text-xs">
       Authorized Signatory
     </div>
-
   </div>
 
 </div>
 
-      {/* ================= Date ================= */}
-
-      <div className="absolute right-16 bottom-12 text-right text-[15px] text-gray-800 z-20">
-
-        <div className="font-semibold">
-          दिनांक / Date : {date}
-        </div>
-
-      </div>
+{/* ================= Date ================= */}
+<div className="absolute right-16 bottom-12 text-right text-[15px] text-gray-800 z-20">
+  <div className="font-semibold">
+    दिनांक / Date : {date}
+  </div>
+</div>
 
       {/* ================= Decorative Bottom Line ================= */}
 
