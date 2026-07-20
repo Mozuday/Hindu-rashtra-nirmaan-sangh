@@ -10,104 +10,79 @@ export default function Certificate({
   return (
     <div
       id="certificate"
-      style={{
-        width: "1123px",
-        height: "794px",
-        background: "#f8f3e8",
-        border: "18px solid #d97706",
-        position: "relative",
-        overflow: "hidden",
-        fontFamily: "Georgia, serif",
-        boxShadow: "0 20px 50px rgba(0,0,0,.25)",
-      }}
+      className="relative w-[1123px] h-[794px] overflow-hidden border-[18px] border-orange-600 bg-[#f8f3e8] shadow-2xl"
     >
+      {/* Background */}
 
-      {/* Watermark */}
       <img
-        src="/Logo.png"
+        src="/bg-pattern.png"
         alt=""
-        style={{
-          position: "absolute",
-          width: "720px",
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%,-50%)",
-          opacity: 0.06,
-        }}
+        className="absolute inset-0 w-full h-full object-cover opacity-10 scale-80"
       />
 
-      {/* Border */}
-      <div
-        style={{
-          position: "absolute",
-          inset: "12px",
-          border: "2px solid #f59e0b",
-        }}
-      />
+      {/* Inner Border */}
 
-      {/* Header */}
-      <div
-        style={{
-          position: "relative",
-          textAlign: "center",
-          paddingTop: "32px",
-          paddingLeft: "20px",
-        }}
-      >
-        <img
-          src="/Logo.png"
-          alt=""
-          style={{
-            width: "95px",
-          }}
-        />
+      <div className="absolute inset-3 border-2 border-orange-400"></div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "20px",
-            marginTop: "8px",
-          }}
-        >
+      {/* ================= TOP BAR ================= */}
+
+<div className="absolute top-6 left-10 right-10 flex items-start justify-between z-20">
+
+  {/* Logo */}
+
+  <img
+    src="/Logo.png"
+    alt="Logo"
+    className="w-35"
+  />
+
+  {/* Sadasya ID */}
+
+  <div className="mt-3 text-right">
+    <div className="text-xl font-bold text-orange-800">
+      सदस्य आईडी
+    </div>
+
+    <div className="text-lg font-semibold text-gray-800">
+      {id}
+    </div>
+  </div>
+
+</div>
+
+      {/* ================= HEADER ================= */}
+
+      <div className="relative z-10 pt-24">
+
+        <div className="flex justify-center items-center gap-6">
+
           <img
             src="/flag.png"
             alt=""
-            style={{
-              width: "90px",
-            }}
+            className="w-20"
           />
 
-          <div>
+          <div className="text-center">
 
-            <div
+            <h1
+              className="font-bold text-orange-700"
               style={{
                 fontSize: "42px",
-                color: "#c2410c",
-                fontWeight: "700",
-                lineHeight: 1.1,
+                lineHeight: "1.1",
               }}
             >
               हिन्दू राष्ट्र निर्माण संघ
-            </div>
+            </h1>
 
-            <div
-              style={{
-                marginTop: "8px",
-                fontSize: "22px",
-                fontWeight: "bold",
-              }}
-            >
+            <div className="mt-2 text-[22px] font-bold">
               Hindu Raashtra Nirmaan Sangh
             </div>
 
             <div
+              className="mt-1 text-gray-600"
               style={{
-                marginTop: "6px",
                 fontSize: "11px",
                 letterSpacing: "3px",
-                color: "#666",
               }}
             >
               OFFICIAL MEMBERSHIP CERTIFICATE
@@ -118,83 +93,58 @@ export default function Certificate({
           <img
             src="/flag.png"
             alt=""
-            style={{
-              width: "90px",
-            }}
+            className="w-20"
           />
+
         </div>
 
-        <div
-          style={{
-            marginTop: "30px",
-          }}
-        >
-          <div
-            style={{
-              fontSize: "30px",
-              color: "#d97706",
-              fontWeight: "bold",
-            }}
-          >
+        {/* Certificate Title */}
+
+        <div className="mt-8 text-center">
+
+          <h2 className="text-[30px] font-bold text-orange-700">
             प्रमाण पत्र | CERTIFICATE
-          </div>
+          </h2>
 
-          <div
-            style={{
-              width: "220px",
-              height: "2px",
-              background: "#d97706",
-              margin: "12px auto 0",
-            }}
-          />
+          <div className="mx-auto mt-3 h-[2px] w-56 bg-orange-600"></div>
+
         </div>
+
       </div>
 
-      {/* Content */}
+      {/* ================= MAIN CONTENT ================= */}
 
-      <div
-        style={{
-          marginTop: "35px",
-          textAlign: "center",
-          color: "#333",
-        }}
-      >
+      <div className="relative z-10 mt-10 px-20 text-center">
+
         <div
+          className="text-gray-800"
           style={{
-            fontSize: "26px",
+            fontSize: "24px",
           }}
         >
           यह प्रमाणित किया जाता है कि
         </div>
 
+        {/* Name */}
+
         <div
+          className="inline-block mt-8 border-b-[3px] border-dashed border-orange-600 pb-2 px-10 font-bold text-orange-700"
           style={{
-            display: "inline-block",
-            marginTop: "22px",
-            fontSize: "48px",
-            color: "#b45309",
-            fontWeight: "bold",
-            borderBottom: "3px dashed #d97706",
-            padding: "0 30px 10px",
+            fontSize: "50px",
           }}
         >
           {name}
         </div>
 
         <div
+          className="mt-8 text-gray-800"
           style={{
-            marginTop: "30px",
             fontSize: "22px",
-            lineHeight: "2",
+            lineHeight: "1.8",
           }}
         >
           पिता का नाम :
-          <span
-            style={{
-              color: "#c2410c",
-              fontWeight: "bold",
-            }}
-          >
+          <span className="font-bold text-orange-700">
             {" "}
             {father}
           </span>
@@ -202,12 +152,7 @@ export default function Certificate({
           <br />
 
           राज्य :
-          <span
-            style={{
-              color: "#c2410c",
-              fontWeight: "bold",
-            }}
-          >
+          <span className="font-bold text-orange-700">
             {" "}
             {state}
           </span>
@@ -224,72 +169,55 @@ export default function Certificate({
           <br />
           <br />
 
-          सदस्य आईडी :
-          <span
-            style={{
-              color: "#c2410c",
-              fontWeight: "bold",
-            }}
-          >
-            {" "}
-            {id}
+          <span className="font-bold text-orange-700 text-[18px]">
+            आपका हार्दिक स्वागत है।
           </span>
+
         </div>
+
       </div>
 
-      {/* Seal */}
+            {/* ================= Bottom Left (Seal + Sign) ================= */}
 
-      <img
-        src="/seal.png"
-        alt=""
-        style={{
-          position: "absolute",
-          width: "140px",
-          right: "70px",
-          bottom: "145px",
-          transform: "rotate(-12deg)",
-          opacity: 0.85,
-        }}
-      />
+<div className="absolute left-12 bottom-8 z-20">
 
-      {/* Footer */}
+  {/* Seal */}
 
-      <div
-        style={{
-          position: "absolute",
-          left: "60px",
-          right: "60px",
-          bottom: "40px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-          fontSize: "16px",
-        }}
-      >
-        <div>
+  <img
+    src="/seal.png"
+    alt="Seal"
+    className="w-40"
+  />
+  {/* Text */}
+
+  <div className="mt-0 text-center">
+
+    <div className="font-semibold text-base">
+      अधिकृत हस्ताक्षर
+    </div>
+
+    <div className="text-xs">
+      Authorized Signatory
+    </div>
+
+  </div>
+
+</div>
+
+      {/* ================= Date ================= */}
+
+      <div className="absolute right-16 bottom-12 text-right text-[15px] text-gray-800 z-20">
+
+        <div className="font-semibold">
           दिनांक / Date : {date}
         </div>
 
-        <div
-          style={{
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "180px",
-              borderBottom: "2px solid #222",
-              marginBottom: "6px",
-            }}
-          />
-
-          अधिकृत हस्ताक्षर
-
-          <br />
-
-          Authorized Signatory
-        </div>
       </div>
+
+      {/* ================= Decorative Bottom Line ================= */}
+
+      <div className="absolute bottom-6 left-12 right-12 h-[2px] bg-orange-500 opacity-40"></div>
+
     </div>
   );
 }
