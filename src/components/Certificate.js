@@ -200,14 +200,14 @@ export default function Certificate({
     <img
       src="/seal.png"
       alt="Seal"
-      className="w-40"
+      className="w-40 absolute bottom-5"
     />
 
     {/* Signature */}
     <img
       src="/sign.png"
       alt="Signature"
-      className="absolute top-5 w-28"
+      className="absolute top-28 w-28"
     />
 
   </div>
