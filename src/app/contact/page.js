@@ -51,7 +51,7 @@ export default function Contact() {
                   </h3>
 
                   <p>
-                    +91 9876543210
+                    +91 9760009741
                   </p>
 
                 </div>
@@ -63,7 +63,7 @@ export default function Contact() {
                   </h3>
 
                   <p>
-                    hrnsorganisation@gmail.com
+                    hindurashtra729@gmail.com
                   </p>
 
                 </div>
@@ -75,7 +75,7 @@ export default function Contact() {
                   </h3>
 
                   <p>
-                    भारत | India
+                    केंद्रीय कार्यालय, जानकी घाट, बड़ा स्थान, अयोध्या जी भारत | India
                   </p>
 
                 </div>
