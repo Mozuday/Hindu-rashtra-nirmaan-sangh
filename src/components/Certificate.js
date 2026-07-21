@@ -33,7 +33,7 @@ export default function Certificate({
   <img
     src="/Logo.png"
     alt="Logo"
-    className="w-35"
+    className="w-40"
   />
 
   {/* Sadasya ID */}
