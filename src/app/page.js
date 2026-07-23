@@ -287,7 +287,7 @@ export default function Home() {
           href="https://udayportfolio-orcin.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-left gap-3 transition hover:text-orange-400 transition"
+          className="text-gray-400 flex items-left gap-3 transition hover:text-orange-400 transition"
         >
           <span>Developer</span>
          </a>
