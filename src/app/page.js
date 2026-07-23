@@ -283,6 +283,15 @@ export default function Home() {
           © 2026 HRNS — All Rights Reserved
         </p>
 
+        <a
+          href="https://udayportfolio-orcin.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-left gap-3 transition hover:text-orange-400 transition"
+        >
+          <span>Developer</span>
+         </a>
+
       </footer>
 
     </main>
